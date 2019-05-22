@@ -4,23 +4,26 @@ public class CricketCoach implements Coach{
 	
 	private FortuneService fortuneService;
 	
-	public CricketCoach() {}
+	public CricketCoach() {
+		System.out.println("Cricket: inside no-arg constructor");
+	}
+	
 	
 	// setter dependency injection example
+	// remember <property name="fortuneService" ref="myFortune"/> the value for name has to be exactly same as the parameter name here
 	public void setFortuneService(FortuneService fortuneService) {
+		System.out.println("Cricket: inside setFortuneService method");
 		this.fortuneService = fortuneService;
 	}
 	
 	@Override
 	public String getDailyWorkout() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Fast bowling for 15 mins...";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getFortune();
 	}
 	
 	

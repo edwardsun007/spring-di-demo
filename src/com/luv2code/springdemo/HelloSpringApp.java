@@ -10,7 +10,7 @@ public class HelloSpringApp {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
 		//2. retrieve bean from spring configuration
-		Coach theCoach = context.getBean("myCoach",Coach.class);  // here bean id is the name myCoach, interface is Coach
+		Coach theCoach = context.getBean("myCricketCoach",Coach.class);  // here bean id is the name myCoach, interface is Coach
 		
 		//3. call methods on the bean
 		System.out.println(theCoach.getDailyWorkout());

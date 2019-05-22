@@ -30,6 +30,11 @@
     	class="com.luv2code.springdemo.NBACoach">
     	<constructor-arg ref="myFortune"/>
     </bean>
+    <!-- setter injection example -->
+     <bean id="myCricketCoach"
+    	class="com.luv2code.springdemo.CricketCoach">
+    	<property name="fortuneService" ref="myFortune"/>
+    </bean>
 </beans>
 
 
